@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Neil Milbourn · BI Lead & Developer</title>
+<meta name="description" content="Neil Milbourn, BI Lead and Developer based in Paris. Power BI, Snowflake, dbt, Python. Dashboards, data pipelines, and analytics engineering.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink:      #1a1a1a;
+    --body:     #33383d;
+    --muted:    #767b81;
+    --line:     #e8e8e8;
+    --accent:   #3d5afe;
+    --accent-2: #2a3eb1;
+    --bg:       #ffffff;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+  body {
+    background: var(--bg);
+    color: var(--body);
+    font-family: 'Inter', -apple-system, sans-serif;
+    font-size: 17px;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 720px; margin: 0 auto; padding: 0 24px; }
+
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { color: var(--accent-2); text-decoration: underline; }
+
+  /* ── HEADER ── */
+  header { padding: 72px 0 8px; }
+  .avatar {
+    width: 108px; height: 108px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    margin-bottom: 28px;
+    border: 1px solid var(--line);
+  }
+  h1 {
+    font-size: 34px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: var(--ink);
+    line-height: 1.15;
+    margin-bottom: 8px;
+  }
+  .role {
+    font-size: 17px;
+    font-weight: 400;
+    color: var(--muted);
+    line-height: 1.5;
+    margin-bottom: 18px;
+  }
+  .contact {
+    font-size: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 4px;
+    align-items: center;
+  }
+  .contact .sep { color: var(--line); margin: 0 4px; }
+
+  /* ── NAV ── */
+  nav {
+    margin: 28px 0 8px;
+  }
+  nav ul { list-style: none; display: flex; flex-wrap: wrap; gap: 4px 22px; }
+  nav li { position: relative; }
+  nav a { font-weight: 500; color: var(--ink); }
+  nav a:hover { color: var(--accent); }
+
+  /* ── SECTIONS ── */
+  section { padding: 8px 0; }
+  h2 {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--ink);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin: 36px 0 18px;
+  }
+  p { margin-bottom: 16px; }
+  p:last-child { margin-bottom: 0; }
+
+  .lede { color: var(--body); }
+
+  hr {
+    border: none;
+    border-top: 1px solid var(--line);
+    margin: 40px 0;
+  }
+
+  /* ── WORK LIST ── */
+  .work-item { margin-bottom: 26px; }
+  .work-item:last-child { margin-bottom: 0; }
+  .work-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 3px;
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+  }
+  a.work-title:hover { color: var(--accent); text-decoration: none; }
+  a.work-title:hover .arrow { transform: translate(2px,-2px); }
+  .arrow { display: inline-block; transition: transform 0.15s ease; color: var(--accent); }
+  .work-meta {
+    font-size: 13px;
+    color: var(--muted);
+    font-weight: 500;
+    margin-bottom: 5px;
+    letter-spacing: 0.01em;
+  }
+  .work-desc { font-size: 15.5px; color: var(--body); line-height: 1.6; }
+  .work-tags { margin-top: 8px; display: flex; flex-wrap: wrap; gap: 6px; }
+  .tag {
+    font-size: 12px;
+    color: var(--muted);
+    background: #f5f6f8;
+    border: 1px solid var(--line);
+    padding: 2px 9px;
+    border-radius: 20px;
+  }
+
+  .disclaimer { font-size: 14px; color: var(--muted); font-style: italic; margin-bottom: 22px; }
+
+  /* ── EXPERIENCE ── */
+  .exp-item { margin-bottom: 22px; }
+  .exp-item:last-child { margin-bottom: 0; }
+  .exp-role { font-size: 16px; font-weight: 600; color: var(--ink); }
+  .exp-org { font-size: 15px; color: var(--body); }
+  .exp-dates { font-size: 13px; color: var(--muted); font-weight: 500; }
+  .exp-note { font-size: 15px; color: var(--body); margin-top: 4px; }
+
+  /* ── FOCUS LIST ── */
+  .focus { list-style: none; }
+  .focus li {
+    padding: 9px 0 9px 22px;
+    border-bottom: 1px solid var(--line);
+    position: relative;
+    font-size: 15.5px;
+    color: var(--body);
+  }
+  .focus li:last-child { border-bottom: none; }
+  .focus li::before {
+    content: '';
+    position: absolute;
+    left: 2px; top: 18px;
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: var(--accent);
+  }
+  .focus li strong { color: var(--ink); font-weight: 600; }
+
+  /* ── FOOTER ── */
+  footer {
+    margin-top: 48px;
+    padding: 28px 0 60px;
+    border-top: 1px solid var(--line);
+    font-size: 14px;
+    color: var(--muted);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  @media (max-width: 560px) {
+    header { padding: 48px 0 8px; }
+    h1 { font-size: 28px; }
+    body { font-size: 16px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- HEADER -->
+  <header>
+    <img src="me.png" alt="Neil Milbourn" class="avatar">
+    <h1>Neil Milbourn</h1>
+    <div class="role">BI Lead &amp; Developer &nbsp;|&nbsp; Power BI, Snowflake &amp; dbt &nbsp;|&nbsp; Dashboards, Data Pipelines &amp; Analytics Engineering</div>
+    <div class="contact">
+      <a href="https://www.linkedin.com/in/neilmilbourn/" target="_blank" rel="noopener">LinkedIn</a>
+      <span class="sep">·</span>
+      <a href="https://github.com/Milbourn" target="_blank" rel="noopener">GitHub</a>
+      <span class="sep">·</span>
+      <a href="mailto:Neil.Milbourn@gmail.com">Email</a>
+      <span class="sep">·</span>
+      <a href="Neil_Milbourn_BI_Lead.pdf" target="_blank" rel="noopener">Résumé</a>
+    </div>
+  </header>
+
+  <!-- NAV -->
+  <nav>
+    <ul>
+      <li><a href="#work">Work</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#focus">Focus Areas</a></li>
+      <li><a href="https://github.com/Milbourn" target="_blank" rel="noopener">GitHub</a></li>
+      <li><a href="Neil_Milbourn_BI_Lead.pdf" target="_blank" rel="noopener">Résumé</a></li>
+    </ul>
+  </nav>
+
+  <!-- INTRO -->
+  <section>
+    <h2>Analytics &amp; BI Portfolio</h2>
+    <p class="lede">
+      I'm an end-to-end BI leader with a decade of experience designing reporting strategies,
+      building Power BI platforms, and delivering data-driven insights for public and commercial
+      organisations. I turn fragmented data into daily decision-making tools at scale.
+    </p>
+    <p class="lede">
+      My work spans the full stack: Python ETL and API integration, cloud warehousing in Snowflake
+      and Azure SQL, transformation with dbt, and dashboard design with Power BI. Based in Paris,
+      working across UK and EU teams.
+    </p>
+  </section>
+
+  <hr>
+
+  <!-- FEATURED WORK -->
+  <section id="work">
+    <h2>Featured Work</h2>
+
+    <div class="work-item">
+      <a href="https://milbourn.github.io/RTE_Energy_Project/" class="work-title">
+        Mapping France's Electricity Mix
+        <span class="arrow">↗</span>
+      </a>
+      <div class="work-meta">End-to-end data engineering · Live dashboard</div>
+      <div class="work-desc">
+        A full pipeline tracking France's power grid: four RTE France APIs feeding 3 million rows
+        through Python, Snowflake, and dbt into a live Power BI dashboard. Includes an analysis of
+        the 2022 energy crisis and recovery, the merit-order price effect, and cross-border export flows.
+      </div>
+      <div class="work-tags">
+        <span class="tag">Python</span>
+        <span class="tag">Snowflake</span>
+        <span class="tag">dbt</span>
+        <span class="tag">Power BI</span>
+        <span class="tag">Claude Code</span>
+      </div>
+    </div>
+  </section>
+
+  <hr>
+
+  <!-- EXPERIENCE -->
+  <section id="experience">
+    <h2>Experience</h2>
+
+    <div class="exp-item">
+      <div class="exp-role">Business Intelligence Lead</div>
+      <div class="exp-org">Upmkt / Mktplaces Ltd <span class="exp-dates">· Oct 2024 – Present</span></div>
+      <div class="exp-note">
+        Re-architected reporting into an Azure SQL warehouse with Python ETL across 5+ marketplace APIs.
+        Scaled the Power BI platform to 20+ users across 30+ client accounts in the UK, EU, US and UAE.
+        Own governance: RLS, deployment pipelines, and refresh orchestration.
+      </div>
+    </div>
+
+    <div class="exp-item">
+      <div class="exp-role">Business Analytics Manager</div>
+      <div class="exp-org">Upmkt <span class="exp-dates">· Mar 2022 – Oct 2024</span></div>
+      <div class="exp-note">
+        Built the company's first Power BI platform from scratch, delivering monthly profitability
+        dashboards across 20+ client accounts. Managed and mentored a two-person analytics team.
+      </div>
+    </div>
+
+    <div class="exp-item">
+      <div class="exp-role">Business Intelligence Analyst</div>
+      <div class="exp-org">Penguin Random House UK <span class="exp-dates">· 2014 – 2022</span></div>
+      <div class="exp-note">
+        Owned Tableau and Power BI dashboards serving 80+ editorial, sales, and marketing users.
+        Delivered commercial insights informing pricing strategy and six-figure budget decisions
+        across 50+ publishing titles. Progressed from Commercial Assistant to BI Analyst over eight years.
+      </div>
+    </div>
+
+    <p style="font-size:14px;color:var(--muted);margin-top:8px;">
+      Earlier: Renewable Scheme Officer at OFGEM (2013–2014), giving a genuine energy-sector grounding
+      that runs through my portfolio work. Full history on <a href="Neil_Milbourn_BI_Lead.pdf" target="_blank" rel="noopener">my résumé</a>.
+    </p>
+  </section>
+
+  <hr>
+
+  <!-- FOCUS AREAS -->
+  <section id="focus">
+    <h2>Core Focus Areas</h2>
+    <ul class="focus">
+      <li><strong>BI &amp; Reporting</strong> – Power BI (Service, RLS, bookmarks, drill-through, paginated reports), DAX, semantic models, KPI frameworks</li>
+      <li><strong>Data Engineering</strong> – Snowflake, Azure SQL, dbt, SQL, Power Query (M), ELT pipelines, REST &amp; GraphQL APIs</li>
+      <li><strong>Automation &amp; Development</strong> – Python, Power Automate, GitHub, Claude Code, Excel VBA</li>
+      <li><strong>Stakeholder &amp; Delivery</strong> – data governance, KPI definition, client-facing reporting, senior leadership engagement</li>
+      <li><strong>Certifications</strong> – Microsoft PL-300 (Power BI Data Analyst) &amp; DP-600 (Fabric Analytics Engineer)</li>
+      <li><strong>Languages</strong> – Native English, B2 French (actively progressing)</li>
+    </ul>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div>© 2026 Neil Milbourn · Paris, France</div>
+    <div>
+      <a href="https://www.linkedin.com/in/neilmilbourn/" target="_blank" rel="noopener">LinkedIn</a>
+      &nbsp;·&nbsp;
+      <a href="https://github.com/Milbourn" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>
