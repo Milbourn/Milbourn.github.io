@@ -99,10 +99,9 @@
 
   .lede { color: var(--body); }
 
-  /* centered intro block */
-  .intro { text-align: center; }
-  .intro h2 { text-align: center; }
-  .intro .lede { max-width: 620px; margin-left: auto; margin-right: auto; }
+  /* intro block */
+  .intro h2 { text-align: left; }
+  .intro .lede { max-width: 620px; }
 
   hr {
     border: none;
@@ -229,14 +228,13 @@
   <section class="intro">
     <h2>Analytics &amp; BI Portfolio</h2>
     <p class="lede">
-      I'm an end-to-end BI leader with a decade of experience designing reporting strategies,
-      building Power BI platforms, and delivering data-driven insights for public and commercial
-      organisations. I turn fragmented data into daily decision-making tools at scale.
+      I build BI platforms end to end: the pipelines that feed them, the models underneath,
+      and the dashboards people open every morning. Ten years of it, first at Penguin Random House,
+      then leading BI at a UK marketplace agency.
     </p>
     <p class="lede">
-      My work spans the full stack: Python ETL and API integration, cloud warehousing in Snowflake
-      and Azure SQL, transformation with dbt, and dashboard design with Power BI. Based in Paris,
-      working across UK and EU teams.
+      Day to day that means Python ETL against REST and GraphQL APIs, warehousing in Snowflake and
+      Azure SQL, transformation in dbt, and Power BI on top. Based in Paris, working with UK and EU teams.
     </p>
   </section>
 
@@ -265,6 +263,26 @@
         <span class="tag">Claude Code</span>
       </div>
     </div>
+
+    <div class="work-item">
+      <a href="Data_Visualisation_Talk_2021.pdf" target="_blank" rel="noopener" class="work-title">
+        Data Visualisation: Ideas and Considerations
+        <span class="arrow">↗</span>
+      </a>
+      <div class="work-meta">Internal talk · Penguin Random House · March 2021</div>
+      <div class="work-desc">
+        A 36-slide talk I gave to the analytics community at Penguin Random House on designing
+        dashboards people actually use. Covers the split between editorial and operational
+        visualisation, why business audiences reward familiarity over novelty, and accessibility
+        in practice: colour blindness, astigmatism, and the case for dark mode.
+      </div>
+      <div class="work-tags">
+        <span class="tag">Dashboard design</span>
+        <span class="tag">Accessibility</span>
+        <span class="tag">Tableau</span>
+        <span class="tag">Power BI</span>
+      </div>
+    </div>
   </section>
 
   <hr>
@@ -277,9 +295,10 @@
       <div class="exp-role">Business Intelligence Lead</div>
       <div class="exp-org">Upmkt / Mktplaces Ltd <span class="exp-dates">· Oct 2024 – Present</span></div>
       <div class="exp-note">
-        Re-architected reporting into an Azure SQL warehouse with Python ETL across 5+ marketplace APIs.
-        Scaled the Power BI platform to 20+ users across 30+ client accounts in the UK, EU, US and UAE.
-        Own governance: RLS, deployment pipelines, and refresh orchestration.
+        Replaced manual SharePoint and CSV reporting with an Azure SQL warehouse fed by Python ETL
+        across five marketplace APIs (Amazon, Meta, Google among them), cutting 14+ hours of weekly
+        manual work. The Power BI platform now serves 20+ users across 30+ client accounts in the
+        UK, EU, US and UAE. I run the platform: access control, deployment pipelines, refresh orchestration.
       </div>
     </div>
 
@@ -296,15 +315,16 @@
       <div class="exp-role">Business Intelligence Analyst</div>
       <div class="exp-org">Penguin Random House UK <span class="exp-dates">· 2014 – 2022</span></div>
       <div class="exp-note">
-        Owned Tableau and Power BI dashboards serving 80+ editorial, sales, and marketing users.
-        Delivered commercial insights informing pricing strategy and six-figure budget decisions
-        across 50+ publishing titles. Progressed from Commercial Assistant to BI Analyst over eight years.
+        Eight years across the UK publishing group, starting as a commercial assistant automating
+        pricing with VBA and finishing as the BI analyst behind Tableau and Power BI dashboards
+        used by 80+ people in editorial, sales, and marketing. The 2021 data visualisation talk
+        above came out of this period.
       </div>
     </div>
 
     <p style="font-size:14px;color:var(--muted);margin-top:8px;">
-      Earlier: Renewable Scheme Officer at OFGEM (2013–2014), giving a genuine energy-sector grounding
-      that runs through my portfolio work. Full history on <a href="Neil_Milbourn_BI_Lead.pdf" target="_blank" rel="noopener">my résumé</a>.
+      Before that: OFGEM (renewable energy schemes) and SGS. Full history on
+      <a href="Neil_Milbourn_BI_Lead.pdf" target="_blank" rel="noopener">my résumé</a>.
     </p>
   </section>
 
